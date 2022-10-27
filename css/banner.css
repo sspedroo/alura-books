@@ -1,0 +1,40 @@
+.banner{
+    background: var(--azul-degrade); /*colocando a cor de fundo, usamos apenas background pois é gradiente*/
+    text-align: center; /*alinhamos tudo com o centro, não somente o texto mas a caixa de input tb*/
+    color: white; /*definimos a cor da fonte para branca*/
+    padding: 2.5em 2em; /*criamos uma margin interna com o padding para melhor visualização e limitando ate onde vai os elementos*/
+}
+
+.banner-titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner-texto{
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.banner-pesquisa{
+    background-color: transparent; /*fundo transparente*/
+    border: 1px solid var(--branco); /*mostrar a borda*/
+    color: var(--branco); /*cor do texto*/
+    border-radius: 24px; /*arrendondando as bordas*/
+    padding: 1em; /*criando um espaço interno nela para uma melhor visualização*/
+    width: 100%; /* 100% para a largura ocupar toda a posição q ela pode ocupar no banner, ou seja, fica do tamanho da div*/
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.banner-pesquisa::placeholder{
+    font-family: 'Poppins';
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: url("../img/lupinha.svg"); /*colocamos a lupinha no place holder*/
+    background-repeat: no-repeat; /*colocamos no repeat para a lupa noa repetir o espaço todo*/
+    background-position: 2.5em;
+}

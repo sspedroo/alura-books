@@ -1,0 +1,67 @@
+.cabecalho-menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat; /*NAO DEIXA A IMAGEM REPETIR*/
+    background-position: center; /*POSICIONA A IMAGEM NO CENTRO*/
+    display: inline-block; /*POE UM DO LADO DO OUTRO MAS DEFINE COMO BLOCK PARA PODER DEFINIR TAMANHO*/
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*PARTE DE CIMA, TOPO DE NAVEGAÇÃO*/
+.cabecalho{
+    background-color: var(--branco);
+    display: flex; /*FICA TODOS UM DO LADO DO OUTRO*/
+    justify-content: space-between; /*HORIZONTAL, COLOCOU CADA UM NUMA PONTA*/
+    align-items: center; /*CENTRLIZOU VERTICALMENTE AS DIVS FILHAS*/
+    position: relative; /*Libera a opção de botar outros atributos como Top, left, right, bottom. Aqui no caso é so pra ficar diferente de static*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.img-container{
+    padding: 1em; /*espaçando os icones */
+}
+
+.lista-menu{
+    display: none; /*Esconde o elemento, não ocupa espaço*/
+    position: absolute;/*Permite q movimente o elemento de acordo com outro q vem antes(ou pai) desde q nao seja static*/
+    top: 100%; /*tirou 100% do cabeçalho e foi para baixo, totalmente para fora do cabeçalho*/
+    width: 60vw; /*configurando o tamanho do menu hamburguer*/ /*vw é viewport width pega a largura da tela atual*/
+}
+
+.container-botao:checked ~ .lista-menu{ /*checked detecta se o input esta preenchido o checkbox, se estiver checked "~" procura outro elemento com classe inserida*/
+    display: block;
+}
+
+
+.lista-menu-titulo, .lista-menu-item{  /*estilizando o menu hamburguer, */
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu-titulo{
+    color: var(--cor-do-botao);
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
+.lista-menu-link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /*ajustando para outros navegadores*/
+    background-clip: text; /*esta informando q a cor do background pega somente no texto*/
+    text-transform: uppercase; /*transformou todas as letras em maiusculas*/
+    font-family: 'Poppins';
+}
+
+.container-botao{
+    display: none;
+}
